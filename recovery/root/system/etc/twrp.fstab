@@ -1,4 +1,4 @@
-#fstab file by lopestom for UMIDIGI_BISON X10PRO_V1.0_20210925 -
+#fstab file by lopestom for OUKITEL_WP16_RU_V04_20220621 - mt6771r_lv978_s95ru-mp_ouqi_cc_1024gbitp64d4_r_lte_6m-cs_mul
 #
 /system         ext4    /dev/block/mapper/system      flags=backup=1;display="System_root";wipeingui
 /vendor         ext4    /dev/block/mapper/vendor      flags=backup=1;display="Vendor";wipeingui
