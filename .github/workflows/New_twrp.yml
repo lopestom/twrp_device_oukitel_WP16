@@ -72,10 +72,10 @@ jobs:
        - name: Release recovery image
          uses: softprops/action-gh-release@v1
          env:
-          GITHUB_TOKEN: ${{ secrets.TEST }}
+          GITHUB_TOKEN: ${{ secrets.OUKITEL }}
          with:
-          tag_name: Umidigi_Power_5-4_128
-          name: TWRP36x_11-Encrypted
+          tag_name: OUKITEL_WP16-V04
+          name: TWRP36x_11
           files: | 
-            twrp/out/target/product/WP16/boot*.img
-            twrp/out/target/product/Power_5/ramdisk*.img
+            twrp/out/target/product/WP16/recovery*.img
+            twrp/out/target/product/WP16/ramdisk*.img
