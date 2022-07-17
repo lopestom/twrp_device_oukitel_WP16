@@ -178,6 +178,7 @@ TARGET_USES_MKE2FS := true
 # Excludes
 TW_EXCLUDE_TWRPAPP := true
 TARGET_DISABLE_TRIPLE_BUFFERING := false
+TW_INCLUDE_PYTHON := false
 
 # Storage
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"
