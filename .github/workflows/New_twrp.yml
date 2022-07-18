@@ -66,7 +66,7 @@ jobs:
          run: |
               PATH=~/bin:$PATH
               cd twrp
-              export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_WP16-eng && mka $TARGET -j8
+              export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_WP16-eng && mka $TARGET -j9
               cp  out/target/product/WP16/recovery.img    out/target/product/WP16/recovery-WP16-A11-$(date +"%Y%m%d-%H%M").img  
              
        - name: Release recovery image
@@ -74,8 +74,7 @@ jobs:
          env:
           GITHUB_TOKEN: ${{ secrets.OUKITEL }}
          with:
-          tag_name: OUKITEL_WP16-V04
-          name: TWRP36x_11
+          tag_name: OUKITEL_WP16_RU_V04
+          name: TWRP36x_11-A11
           files: | 
             twrp/out/target/product/WP16/recovery*.img
-            twrp/out/target/product/WP16/ramdisk*.img
