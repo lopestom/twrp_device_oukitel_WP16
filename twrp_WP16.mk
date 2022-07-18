@@ -6,7 +6,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Inherit from device/oukitel/WP16 device
+# Inherit from WP16 device
 $(call inherit-product, device/oukitel/WP16/device.mk)
 
 # Inherit some common twrp stuff.

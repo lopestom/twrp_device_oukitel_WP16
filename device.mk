@@ -26,8 +26,6 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 # API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-PRODUCT_PLATFORM := mt6771
-
 # A/B
 AB_OTA_UPDATER := false
 # A/B
@@ -37,10 +35,4 @@ ENABLE_VIRTUAL_AB := false
 BOARD_USES_RECOVERY_AS_BOOT := false
 TARGET_NO_RECOVERY := false
 TW_HAS_NO_RECOVERY_PARTITION := false
-
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
-
-TW_OVERRIDE_SYSTEM_PROPS := \
-    "ro.build.product;ro.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
+#RECOVERY_API_VERSION := 3
