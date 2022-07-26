@@ -15,8 +15,8 @@ on:
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp -b twrp-11
   DEVICE: WP16
-  DT_LINK: https://github.com/lopestom/twrp_oukitel_WP16
-  DT_PATH: device/oukitel/WP16
+  DT_LINK: https://github.com/lopestom/twrp_oukitel_WP16_RU
+  DT_PATH: device/oukitel/WP16_RU
   TARGET: recoveryimage
   TZ: Asia/manila
 
@@ -46,7 +46,7 @@ jobs:
        - name: Set Swap Space
          uses: pierotofy/set-swap-space@master
          with:
-           swap-size-gb: 10
+           swap-size-gb: 12
 
        - name: Sync recovery source and device tree
          run: |
@@ -60,14 +60,14 @@ jobs:
        - name: Checkout device tree
          uses: actions/checkout@v2
          with:
-          path: twrp/device/oukitel/WP16
+          path: twrp/device/oukitel/WP16_RU
              
        - name: Build
          run: |
               PATH=~/bin:$PATH
               cd twrp
-              export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_WP16-eng && mka $TARGET -j9
-              cp  out/target/product/WP16/recovery.img    out/target/product/WP16/recovery-WP16-A11-$(date +"%Y%m%d-%H%M").img  
+              export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_WP16_RU-eng && mka $TARGET -j10
+              cp  out/target/product/WP16_RU/recovery.img    out/target/product/WP16_RU/recovery-WP16_RU-A11-$(date +"%Y%m%d-%H%M").img  
              
        - name: Release recovery image
          uses: softprops/action-gh-release@v1
@@ -77,4 +77,4 @@ jobs:
           tag_name: OUKITEL_WP16_RU_V04
           name: TWRP36x_11-A11
           files: | 
-            twrp/out/target/product/WP16/recovery*.img
+            twrp/out/target/product/WP16_RU/recovery*.img
