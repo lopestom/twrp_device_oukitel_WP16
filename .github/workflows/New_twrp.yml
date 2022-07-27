@@ -14,7 +14,7 @@ on:
 
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp -b twrp-11
-  DEVICE: WP16_RU
+  DEVICE: WP16
   DT_LINK: https://github.com/lopestom/twrp_device_oukitel_WP16_RU
   DT_PATH: device/oukitel/WP16_RU
   TARGET: recoveryimage
