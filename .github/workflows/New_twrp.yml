@@ -66,7 +66,7 @@ jobs:
          run: |
               PATH=~/bin:$PATH
               cd twrp
-              export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_WP16_RU-eng && mka $TARGET -j10
+              export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_WP16_RU-eng && mka $TARGET -j$(nproc --all)
               cp  out/target/product/WP16_RU/recovery.img    out/target/product/WP16_RU/recovery-WP16_RU-A11-$(date +"%Y%m%d-%H%M").img  
              
        - name: Release recovery image
