@@ -20,3 +20,11 @@ LOCAL_PATH := device/oukitel/WP16_RU
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 30
+
+# API
+PRODUCT_SHIPPING_API_LEVEL := 29
+
+PRODUCT_PLATFORM := mt6771
