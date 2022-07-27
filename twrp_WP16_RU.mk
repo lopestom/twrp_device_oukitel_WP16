@@ -11,8 +11,8 @@ $(call inherit-product, device/oukitel/WP16_RU/device.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := WP16
-PRODUCT_NAME := WP16_RU
+PRODUCT_DEVICE := WP16_RU
+PRODUCT_NAME := twrp_WP16_RU
 PRODUCT_BRAND := OUKITEL
 PRODUCT_MODEL := WP16
 PRODUCT_MANUFACTURER := OUKITEL
