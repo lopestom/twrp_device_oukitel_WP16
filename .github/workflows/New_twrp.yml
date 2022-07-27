@@ -14,7 +14,7 @@ on:
 
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp -b twrp-11
-  DEVICE: WP16
+  DEVICE: WP16_RU
   DT_LINK: https://github.com/lopestom/twrp_device_oukitel_WP16_RU
   DT_PATH: device/oukitel/WP16_RU
   TARGET: recoveryimage
@@ -67,7 +67,7 @@ jobs:
               PATH=~/bin:$PATH
               cd twrp
               export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_WP16_RU-eng && mka $TARGET -j10
-              cp  out/target/product/WP16/recovery.img    out/target/product/WP16/recovery-WP16_RU-A11-$(date +"%Y%m%d-%H%M").img  
+              cp  out/target/product/WP16_RU/recovery.img    out/target/product/WP16_RU/recovery-WP16_RU-A11-$(date +"%Y%m%d-%H%M").img  
              
        - name: Release recovery image
          uses: softprops/action-gh-release@v1
@@ -77,4 +77,4 @@ jobs:
           tag_name: OUKITEL_WP16_RU_V04
           name: TWRP36x_11-A11
           files: | 
-            twrp/out/target/product/WP16/recovery*.img
+            twrp/out/target/product/WP16_RU/recovery*.img
