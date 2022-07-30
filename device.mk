@@ -17,6 +17,9 @@
 
 LOCAL_PATH := device/oukitel/WP16_RU
 
+# dynamic partition stuff
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
