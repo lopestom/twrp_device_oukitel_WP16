@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/oukitel/WP16_RU
+LOCAL_PATH := device/oukitel/WP16
 
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
