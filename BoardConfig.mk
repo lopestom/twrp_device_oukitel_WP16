@@ -135,12 +135,14 @@ TW_INCLUDE_CRYPTO := false
 #TW_INCLUDE_FBE := true
 #TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
-TARGET_RECOVERY_DEVICE_MODULES += libpuresoftkeymasterdevice
-#TARGET_RECOVERY_DEVICE_MODULES += ashmemd_aidl_interface-cpp
-#TARGET_RECOVERY_DEVICE_MODULES += libashmemd_client
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
-#TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so 
-#TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so
+# Additional binaries & libraries needed for recovery
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libkeymaster4 \
+    libpuresoftkeymasterdevice
+
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
