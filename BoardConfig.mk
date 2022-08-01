@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/oukitel/WP16
+DEVICE_PATH := device/oukitel/WP16_RU
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
