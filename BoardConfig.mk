@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/oukitel/WP16_RU
+DEVICE_PATH := device/oukitel/WP16
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -163,7 +163,7 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-BOARD_USE_CUSTOM_RECOVERY_FONT := "roboto_15x24.h"
+#BOARD_USE_CUSTOM_RECOVERY_FONT := "roboto_15x24.h"
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 150
 #TW_SCREEN_BLANK_ON_BOOT := true
@@ -176,6 +176,7 @@ TW_DEFAULT_LANGUAGE := ru
 TW_NO_SCREEN_BLANK := true
 TW_NO_BATT_PERCENT := false
 TARGET_DISABLE_TRIPLE_BUFFERING := false
+
 # Excludes
 TW_EXCLUDE_TWRPAPP := true
 TW_INCLUDE_PYTHON := false
@@ -199,4 +200,4 @@ DEVICE_SCREEN_HEIGHT := 1560
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
-TW_DEVICE_VERSION := OUKITEL_WP16_RU_V04_20220621 by lopestom
+TW_DEVICE_VERSION := 2-OUKITEL_WP16_RU_V04_20220621 by lopestom
