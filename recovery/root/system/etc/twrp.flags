@@ -1,0 +1,28 @@
+#
+# twrp.flags for WP16 by mct_@xda
+######################
+#
+#
+###### mount base
+/persist_mount          ext4      /dev/block/platform/bootdevice/by-name/persist          flags=display="Persist";backup=0
+/data                         ext4     /dev/block/platform/bootdevice/by-name/userdata     flags=fileencryption=aes-256-xts
+/cache_mount            ext4     /dev/block/platform/bootdevice/by-name/cache        flags=display="Cache";backup=0
+/protect1_mount        ext4     /dev/block/platform/bootdevice/by-name/protect1     flags=display="Protect1";backup=0
+/protect2_mount        ext4     /dev/block/platform/bootdevice/by-name/protect2         flags=subpartitionof=/protect1_mount;display="Protect2";backup=0
+/nvdata_mount           ext4     /dev/block/platform/bootdevice/by-name/nvdata       flags=display="NvData";backup=0
+/nvcfg_mount            ext4     /dev/block/platform/bootdevice/by-name/nvcfg        flags=display="NvCFG";backup=0
+/metadata_mount      ext4     /dev/block/platform/bootdevice/by-name/md_udc     flags=slotselect;display="MetaData";backup=0
+
+###### logical base
+/system           ext4     /dev/block/mapper/system                            flags=backup=1;backup=1;logical
+/system_image     emmc     /dev/block/mapper/system                            flags=backup=1;backup=1;flashimg=1;logical
+/vendor           ext4     /dev/block/mapper/vendor                            flags=display="Vendor";backup=1;logical
+/vendor_image     emmc     /dev/block/mapper/vendor                            flags=display="Vendor_image";backup=1;flashimg=1;logical
+/product          ext4     /dev/block/mapper/product                           flags=display="Product";backup=1;logical
+/product_image    emmc     /dev/block/mapper/product                           flags=display="Product image";backup=1;flashimg=1;logical
+
+#Ext +
+# External-Devices (SDCARD | OTG
+/external_sd	auto 	/dev/block/mmcblk0p1  /dev/block/mmcblk0            flags=display="External SDcard";storage;wipeingui;removable;fsflags="utf8"
+#/sdcard        vfat          /data/media/0             flags=wipeingui;storage;backup=1;display="Internal SDcard";storage;wipeingui;removable;fsflags="utf8"
+/usb_otg      auto  vfat   /dev/block/sda1      /dev/block/sda         flags=display="Usb_Otg";storage;wipeingui;removable;fsflags="utf8"
