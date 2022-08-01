@@ -14,9 +14,9 @@ on:
 
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp -b twrp-11
-  DEVICE: WP16_RU
-  DT_LINK: https://github.com/lopestom/twrp_device_oukitel_WP16_RU
-  DT_PATH: device/oukitel/WP16_RU
+  DEVICE: WP16
+  DT_LINK: https://github.com/lopestom/twrp_device_oukitel_WP16
+  DT_PATH: device/oukitel/WP16
   TARGET: recoveryimage
   TZ: Asia/manila
 
@@ -60,14 +60,14 @@ jobs:
        - name: Checkout device tree
          uses: actions/checkout@v2
          with:
-          path: twrp/device/oukitel/WP16_RU
+          path: twrp/device/oukitel/WP16
              
        - name: Build
          run: |
               PATH=~/bin:$PATH
               cd twrp
-              export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_WP16_RU-eng && mka $TARGET -j$(nproc --all)
-              cp  out/target/product/WP16_RU/recovery.img    out/target/product/WP16_RU/recovery-WP16_RU-A11-$(date +"%Y%m%d-%H%M").img  
+              export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_WP16-eng && mka $TARGET -j$(nproc --all)
+              cp  out/target/product/WP16/recovery.img    out/target/product/WP16/recovery-WP16-A11-$(date +"%Y%m%d-%H%M").img  
              
        - name: Release recovery image
          uses: softprops/action-gh-release@v1
@@ -75,6 +75,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.OUKITEL }}
          with:
           tag_name: OUKITEL_WP16_RU_V04
-          name: TWRP362_11-A11
+          name: TWRP362_11-Enc
           files: | 
-            twrp/out/target/product/WP16_RU/recovery*.img
+            twrp/out/target/product/WP16/recovery*.img
