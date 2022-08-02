@@ -86,7 +86,7 @@
 #
 /vbmeta_vendor emmc /dev/block/sdc8 flags=slotselect;display="Vbmeta_Vendor";backup=1;flashimg=1;wipeingui
 #
-/vbmeta_system emmc /dev/block/sdc7 flags=slotselect;display="Vbmeta_Vystem";backup=1;flashimg=1;wipeingui
+/vbmeta_system emmc /dev/block/sdc7 flags=slotselect;display="Vbmeta_System";backup=1;flashimg=1;wipeingui
 #
 /vendor_boot emmc /dev/block/sdc34 flags=slotselect;display="Vendor_Boot";backup=1;flashimg=1;wipeingui
 #
