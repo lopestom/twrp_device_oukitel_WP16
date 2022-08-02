@@ -20,14 +20,16 @@ LOCAL_PATH := device/oukitel/WP16
 # dynamic partition stuff
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
-# VNDK
+# VNDK API
 PRODUCT_TARGET_VNDK_VERSION := 30
 
-# API
+# SHIPPING API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# define hardware platform
 PRODUCT_PLATFORM := mt6771
