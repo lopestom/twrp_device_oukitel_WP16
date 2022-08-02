@@ -177,6 +177,9 @@ TW_NO_SCREEN_BLANK := true
 TW_NO_BATT_PERCENT := false
 TARGET_DISABLE_TRIPLE_BUFFERING := false
 
+# Use mke2fs to create ext4 images
+TARGET_USES_MKE2FS := true
+
 # Excludes
 TW_EXCLUDE_TWRPAPP := true
 TW_INCLUDE_PYTHON := false
