@@ -15,5 +15,5 @@ TWRP Pictures
 -------------
 ![Front Device](https://cdn-files.kimovil.com/phone_front/0006/93/thumb_592509_phone_front_big.jpg)
 ![Initial Menu](https://github.com/lopestom/twrp_device_oukitel_WP16_RU/blob/recovery/pictures/TWRP-Screenshot_2022-07-28-16-35-03.png)
-
+![Camera Cutout](https://github.com/lopestom/twrp_device_oukitel_WP16/blob/recovery/pictures/IMG_20220801_102102.png?raw=true)
 
