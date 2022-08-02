@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/oukitel/WP16
+LOCAL_PATH := device/oukitel/WP16_RU
 
 # dynamic partition stuff
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
