@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/oukitel/WP16
+DEVICE_PATH := device/oukitel/WP16_RU
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -134,14 +134,14 @@ BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS += metadata
 
 # Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_FBE := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
-TW_CRYPTO_FS_TYPE := "ext4"
-TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/bootdevice/by-name/userdata"
-TW_CRYPTO_MNT_POINT := "/data"
-TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
+TW_INCLUDE_CRYPTO := false
+#TW_INCLUDE_CRYPTO_FBE := true
+#TW_INCLUDE_FBE := true
+#TW_INCLUDE_FBE_METADATA_DECRYPT := true
+#TW_CRYPTO_FS_TYPE := "ext4"
+#TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/bootdevice/by-name/userdata"
+#TW_CRYPTO_MNT_POINT := "/data"
+#TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
 
 # Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += libkeymaster4
@@ -203,4 +203,4 @@ DEVICE_SCREEN_HEIGHT := 1560
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
-TW_DEVICE_VERSION := 2-OUKITEL_WP16_RU_V04_20220621 by lopestom
+TW_DEVICE_VERSION := OUKITEL WP16_RU_V04_20220621 - lopestom
