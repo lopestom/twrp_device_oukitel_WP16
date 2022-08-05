@@ -35,6 +35,7 @@ on fs
     write /config/usb_gadget/g1/strings/0x409/product ${ro.product.model}
     mkdir /config/usb_gadget/g1/functions/mass_storage.usb0
     mkdir /config/usb_gadget/g1/functions/ffs.adb
+    mkdir /config/usb_gadget/g1/functions/ffs.fastboot
     mkdir /config/usb_gadget/g1/functions/mtp.gs0
     write /config/usb_gadget/g1/functions/mtp.gs0/os_desc/interface.MTP/compatible_id "MTP"
     mkdir /config/usb_gadget/g1/functions/hid.gs0
@@ -45,6 +46,8 @@ on fs
     write /config/usb_gadget/g1/configs/b.1/MaxPower 500
     symlink /config/usb_gadget/g1/configs/b.1 /config/usb_gadget/g1/os_desc/b.1
     mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
+    mkdir /dev/usb-ffs/fastboot 0770 system system
+    mount functionfs fastboot /dev/usb-ffs/fastboot rmode=0770,fmode=0660,uid=1000,gid=1000
     write /sys/class/android_usb/android0/f_ffs/aliases adb,fastboot
 
     # for UAC MAX dpidle time
