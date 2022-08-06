@@ -17,8 +17,10 @@
 
 LOCAL_PATH := device/oukitel/WP16_RU
 
+# Fastbootd stuff
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd
 
 # VNDK
