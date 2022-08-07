@@ -14,8 +14,8 @@ on init
     wait /dev/block/platform/bootdevice	
     symlink /dev/block/platform/bootdevice /dev/block/bootdevice
 
-on boot
-    start health-hal-2-0
+   start boot-hal-1-1
+   start health-hal-2-1
 
 service hwservicemanager /system/bin/hwservicemanager
     user root
